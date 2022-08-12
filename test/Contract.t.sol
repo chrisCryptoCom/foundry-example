@@ -11,8 +11,7 @@ contract ContractTest is Test {
         instance = new Contract();
     }
 
-    function testAdd() public {
-        uint a = 1;
+    function testAdd(uint a) public {
         uint countBefore = instance.count();
         instance.add(a);
         uint countAfter = instance.count();
