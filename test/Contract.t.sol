@@ -26,4 +26,8 @@ contract ContractTest is Test {
         uint countAfter = instance.count();
         assertEq(countAfter, countBefore + a * 2);
     }
+
+    function invariantIsNotMagicNumber() public {
+        assertFalse(instance.isMagic(), "Should never be magic");
+    }
 }
