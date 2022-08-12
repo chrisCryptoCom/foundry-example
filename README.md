@@ -34,7 +34,7 @@ Help on any of the below command can be found with `forge COMMAND --help`
 `forge init` (useful options `--no-commit`, `--force`)
 
 ## Install a depencency
-`forge install forge install openzeppelin/openzeppelin-contracts` (Specify github repo owner/name to select depency)
+`forge install openzeppelin/openzeppelin-contracts` (Specify github repo owner/name to select depency)
 
 ## Compile contracts
 `forge build` 
