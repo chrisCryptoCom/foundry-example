@@ -1,17 +1,10 @@
+on: [push]
+
 name: test
 
-on:
-  push:
-    branches:
-      - master
-  pull_request:
-
-env:
-  FOUNDRY_PROFILE: ci
-
 jobs:
-  test:
-    name: Foundry test
+  check:
+    name: Foundry project
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -23,10 +16,8 @@ jobs:
         with:
           version: nightly
 
-      - name: Run Forge build
-        run: |
-          forge --version
-          forge build --sizes
+      - name: Run tests
+        run: forge test -vvv
 
-      - name: Run Forge tests
-        run:  forge test
+      - name: Run snapshot
+        run: forge snapshot
