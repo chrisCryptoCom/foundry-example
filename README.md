@@ -7,8 +7,6 @@ Foundry is set apart by several advantages:
 3. Powerful testing tools such as fuzzing, invariant tests (and soon symbolic execution)
 4. Easy manipulation of the blockchain state etc. using [Cheatcodes](https://book.getfoundry.sh/forge/cheatcodes?highlight=vm.#cheatcodes)
 
-# Foundry Framework Example
-
 # Getting started 
 
 ## Documentation
