@@ -19,6 +19,7 @@ contract ContractTest is Test {
     }
 
     function testAddTwice(uint a) public {
+        a = a / 2;
         uint countBefore = instance.count();
         instance.add(a);
         instance.add(a);
