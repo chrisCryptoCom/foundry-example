@@ -1,13 +1,14 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.13;
+import "openzeppelin-contracts/contracts/access/Ownable.sol";
 
-contract Contract {
+contract Contract is Ownable {
     uint public count;
     uint magicNumber;
     bool public isMagic;
 
 
-    function setMagicNumber(uint _magicNumber) public {
+    function setMagicNumber(uint _magicNumber) onlyOwner public {
         magicNumber = _magicNumber;
     }
 
