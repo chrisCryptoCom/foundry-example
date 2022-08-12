@@ -7,6 +7,10 @@ contract Contract {
     bool public isMagic;
 
 
+    function setMagicNumber(uint _magicNumber) public {
+        magicNumber = _magicNumber;
+    }
+
     function add(uint a) public {
 
         count += a;
