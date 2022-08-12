@@ -8,6 +8,10 @@ contract Contract is Ownable {
     bool public isMagic;
 
 
+    constructor(address _owner) {
+        _transferOwnership(_owner);
+    }
+
     function setMagicNumber(uint _magicNumber) onlyOwner public {
         magicNumber = _magicNumber;
     }
