@@ -17,4 +17,12 @@ contract ContractTest is Test {
         uint countAfter = instance.count();
         assertEq(countAfter, countBefore + a);
     }
+
+    function testAddTwice(uint a) public {
+        uint countBefore = instance.count();
+        instance.add(a);
+        instance.add(a);
+        uint countAfter = instance.count();
+        assertEq(countAfter, countBefore + a * 2);
+    }
 }
